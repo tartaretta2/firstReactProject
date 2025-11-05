@@ -2,6 +2,12 @@ body {
     background-color: #000000ea;
     font-family: Arial, sans-serif;
     color: antiquewhite;
+    transition: background-color 0.8s, color 0.8s;
+}
+
+.light-theme {
+    background-color: antiquewhite;
+    color: #000000ea;
 }
 
 header {
@@ -37,7 +43,8 @@ header nav {
     background: linear-gradient(to right, #ffecd2, #fcb69f);
     width: 33%;
     padding: 20px;
-    margin: 30px auto;
+    position: absolute;
+    left: 33%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: black;
@@ -46,24 +53,32 @@ header nav {
     justify-content: space-around;
 }
 
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    height: 20vh;
-    background-color: #eee;
+#themeButton {
+    position: fixed;
+    bottom: 8vh;
+    right: 1vw;
+    padding: 10px 15px;
+    background-color: #4d98ee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.box {
-    background-color: cornflowerblue;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 200px;
-    text-align: center;
+#themeButton:hover {
+    background-color: #9357c7;
+}
+
+#projectTitle {
+    display: none;
+    margin-top: 4vh;
+}
+
+.projectDescription {
+    display: none;
+    margin-top: 2vh;
 }
 
 
